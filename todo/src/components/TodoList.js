@@ -2,6 +2,8 @@ import React from 'react';
 import Todo from './Todo'
 import { connect } from 'react-redux'
 
+import 'todo.css'
+
 import { addTask, toggleTask } from '../actions'
 
 

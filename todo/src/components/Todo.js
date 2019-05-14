@@ -2,9 +2,9 @@ import React from 'react';
 
 function Todo(props) {
     let classNames = "item";
-    // if (props.item.task.complete) {
-    //   classNames += " completed";
-    // }
+    if (props.item.complete) {
+      classNames += " completed";
+    }
 
     function toggle() {
         props.toggleTask(props.item.id)
