@@ -32,14 +32,17 @@ class TodoList extends  React.Component {
                 {this.props.tasks.map(eachTask => (        
                     <Todo key={eachTask.id} item={eachTask} toggleTask={this.toggleTask} />
                 ))}
+                <form className='mainForm' onSubmit={this.addTask}>
                     <input 
                     required
+                    autoComplete='off'
                     placeholder='Task'
                     name="input"
                     value={this.state.newTask} 
                     onChange={this.handleChanges} >
                     </input>
-                    <button className='button' onClick={this.addTask}>Add Todo</button>
+                    <button className='button' type='submit'>Add Todo</button>
+                </form>
         </React.Fragment>
         )
     }
