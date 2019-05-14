@@ -2,18 +2,18 @@ import React from 'react';
 
 function Todo(props) {
     let classNames = "item";
-    if (props.item.completed) {
-      classNames += " completed";
-    }
+    // if (props.item.task.complete) {
+    //   classNames += " completed";
+    // }
 
     function toggle() {
-        props.toggleItem(props.task.id)
+        props.toggleTask(props.item.id)
     }
 
     return (
         <div className='eachItem'>
             <li className={classNames} onClick={toggle}>
-                {props.item.task}
+                {props.item.task} 
             </li>
         </div>
     )

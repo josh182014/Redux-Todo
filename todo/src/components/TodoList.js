@@ -2,7 +2,7 @@ import React from 'react';
 import Todo from './Todo'
 import { connect } from 'react-redux'
 
-import { addTask } from '../actions'
+import { addTask, toggleTask } from '../actions'
 
 
 class TodoList extends  React.Component {
@@ -20,8 +20,9 @@ class TodoList extends  React.Component {
         this.setState({ newTask: ''})
     }
 
-    toggleItem = e => {
+    toggleTask = id => {
         console.log('toggled')
+        this.props.toggleTask(id);
     }
 
     render() {
@@ -29,7 +30,7 @@ class TodoList extends  React.Component {
         return (
             <React.Fragment>
                 {this.props.tasks.map(eachTask => (        
-                    <Todo key={eachTask.id} item={eachTask} toggleItem={this.toggleItem} />
+                    <Todo item={eachTask} toggleTask={this.toggleTask} />
                 ))}
                     <input 
                     required
@@ -52,6 +53,5 @@ const mapStateToProps = state => {
   
 export default connect(
     mapStateToProps,
-    { addTask }
+    { addTask, toggleTask }
 )(TodoList);
-  

@@ -19,7 +19,7 @@ const dummyData = [
 function App() {
   return (
     <div className="App">
-      <h1>My Awesome React App featuring Redux!!!</h1>
+      <h1>My Awesome React Todo App featuring Redux!!!</h1>
       {/* <TodoForm className='form' /> */}
       <TodoList />
     </div>
