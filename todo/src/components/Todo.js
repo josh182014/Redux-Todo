@@ -12,9 +12,9 @@ function Todo(props) {
 
     return (
         <div className='eachItem'>
-            <li className={classNames} onClick={toggle}>
+            <div className={classNames} onClick={toggle}>
                 {props.item.task} 
-            </li>
+            </div>
         </div>
     )
 }
