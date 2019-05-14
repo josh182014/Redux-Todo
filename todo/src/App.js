@@ -1,20 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList'
-import TodoForm from './components/TodoForm'
+import  './components/Todo.css'
 import './App.css';
-
-const dummyData = [
-  {
-    todo: 'idk',
-    id: 65436,
-    completed: false
-  },
-  {
-    todo: 'stuff',
-    id: 34234,
-    completed: false
-  }
-]
 
 function App() {
   return (

@@ -2,8 +2,6 @@ import React from 'react';
 import Todo from './Todo'
 import { connect } from 'react-redux'
 
-import 'todo.css'
-
 import { addTask, toggleTask } from '../actions'
 
 
@@ -32,7 +30,7 @@ class TodoList extends  React.Component {
         return (
             <React.Fragment>
                 {this.props.tasks.map(eachTask => (        
-                    <Todo item={eachTask} toggleTask={this.toggleTask} />
+                    <Todo key={eachTask.id} item={eachTask} toggleTask={this.toggleTask} />
                 ))}
                     <input 
                     required
