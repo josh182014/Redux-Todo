@@ -1,0 +1,30 @@
+.eachItem {
+    margin: 10px 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: darkgray;
+}
+
+.mainForm {
+    display: flex;
+    justify-content: center;
+}
+
+.mainForm input {
+    color: black;
+    background-color: darkgray;
+    border: none;
+    height: 18px;
+    width: 30%;
+}
+
+button {
+    background-color: lightgray;
+    height: 20px;
+    border: none;
+    margin-left: 5px;
+}
